@@ -1,6 +1,6 @@
 let server;
 
-export function fetchPhotos(endpoint) {
+export function request(endpoint) {
     return axios.request({
         url: server + endpoint,
         headers:  {

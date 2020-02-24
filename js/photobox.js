@@ -5,6 +5,5 @@ $(function () {
     $('load').on('click', function () {
         load();
     });
-    console.log('sqdf');
 });
 

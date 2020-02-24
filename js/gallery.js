@@ -1,4 +1,4 @@
-import {fetchPhotos, initLoader} from "./photoloader.js";
+import {request, initLoader} from "./photoloader.js";
 
 let id;
 
@@ -10,7 +10,7 @@ function insert(data) {
                 alt: photo.photo.titre,
                 title: photo.photo.titre,
                 src: photo.photo.thumbnail.href
-            })
+            });
             $('.row').append(card);
         });
     }
@@ -18,7 +18,7 @@ function insert(data) {
 
 export function load() {
     initLoader('https://webetu.iutnc.univ-lorraine.fr');
-    fetchPhotos('/www/canals5/photobox/photos').then(function (response) {
+    request('/www/canals5/photobox/photos').then(function (response) {
         insert(response.data);
     });
 }
