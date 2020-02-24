@@ -1,84 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/main.css">
-    <title>photobox</title>
-</head>
-<body>
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Jules Sayer, Flavien Chagras">
+        <title>Photobox · </title>
 
-<nav>
-    <button id="load_gallery">load</button>
-    <button id="previous">prev page</button>
-    <button id="next">next page</button>
-</nav>
-
-<main id="gallery">
-    <div class="gallery-container" id="photobox-gallery">
-        <div class="vignette">
-            <img
-                    data-img="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/large/img_586d38dc3123d.jpg"
-                    data-uri="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/photos/100"
-                    src="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/small/img_586d38dc3123d.jpg">
-            <div>water-lily-1893220_1920</div>
-        </div>
-
-        <div class="vignette">
-            <img data-img="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/large/img_586d38dbc84ac.jpg"
-                 data-uri="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/photos/101"
-                 src="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/small/img_586d38dbc84ac.jpg">
-            <div>water-1910237_1920</div>
-        </div>
-
-        <div class="vignette">
-            <img data-img="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/large/img_586d38db67677.jpg"
-                 data-uri="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/photos/102"
-                 src="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/small/img_586d38db67677.jpg">
-            <div>warren-falls-1935615_1920</div>
-        </div>
-
-        <div class="vignette">
-            <img data-img="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/large/img_586d38db0444d.jpg"
-                 data-uri="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/photos/103"
-                 src="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/small/img_586d38db0444d.jpg">
-            <div>roe-deer-1931979_1920</div>
-        </div>
-
-        <div class="vignette">
-            <img data-img="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/large/img_586d38daa09e8.jpg"
-                 data-uri="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/photos/104"
-                 src="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/small/img_586d38daa09e8.jpg">
-            <div>prairie-rattlesnake-1929345_1280</div>
-        </div>
-    </div>
-
-
-    <!-- lightbox container should come here -->
-
-    <!--
-    <div class="lightboc_container" id="lightbox_container">
-        <div id="lightbox">
-            <div id="lightbox-head">
-                <p id="lightbox_close">-X-</p>
-                <h1 id="lightbox_title">titre photo</h1>
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/album.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+    </head>
+    <body>
+        <header>
+            <div class="navbar navbar-dark bg-dark shadow-sm">
+                <div class="container d-flex justify-content-between">
+                    <a href="#" class="navbar-brand d-flex align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                        <strong>Photobox</strong>
+                    </a>
+                </div>
             </div>
+        </header>
 
-            <div id="lightbox-img">
-                <img id="lightbox_full_img" src="https://webetu.iutnc.univ-lorraine.fr/www/canals5/photobox/img/large/img_586d38daa09e8.jpg">
+        <main>
+            <section class="jumbotron text-center">
+                <div class="container">
+                    <h1>Photobox</h1>
+                    <p class="lead text-muted">Sah quel plaisir d'utiliser Bootstrap 🙄.</p>
+                    <p>
+                        <a href="#" class="btn btn-primary my-2"><i class="fas fa-backward"></i></a>
+                        <a href="#" class="btn btn-secondary my-2">Mettre à jour</a>
+                        <a href="#" class="btn btn-primary my-2"><i class="fas fa-forward"></i></a>
+                    </p>
+                </div>
+            </section>
+
+            <div class="album py-5 bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="card-img-top" height="225" src="https://via.placeholder.com/600" alt="">
+                                <div class="card-body">
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                        </div>
+                                        <small class="text-muted">9 mins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="card-img-top" height="225" src="https://via.placeholder.com/600" alt="">
+                                <div class="card-body">
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                        </div>
+                                        <small class="text-muted">9 mins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="card-img-top" height="225" src="https://via.placeholder.com/600" alt="">
+                                <div class="card-body">
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                        </div>
+                                        <small class="text-muted">9 mins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </main>
+        <footer class="text-muted">
+            <div class="container">
+                <p class="float-right">
+                    <a href="#">Remonter</a>
+                </p>
+                <p>Projet Photobox | Prog. Web/Client - CHAGRAS Flavien, SAYER Jules - SI2</p>
+                <p>Projet réalisé en utilisant <a href="https://getbootstrap.com/">Bootstrap</a>.</p>
+            </div>
+        </footer>
 
-    </div>
-    -->
-
-</main>
-<script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous">
-</script>
-<script> window.jQuery || document.write('<script src="node_modules/jquery/dist/jquery.min.js"><\/script>') </script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script type="module" src="js/photobox.js"></script>
-</body>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.bundle.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script type="module" src="js/photobox.js"></script>
+    </body>
 </html>
