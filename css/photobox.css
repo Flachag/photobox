@@ -32,6 +32,10 @@ footer p {
     margin-bottom: .25rem;
 }
 
+.card img {
+    cursor: pointer;
+}
+
 #lightbox {
     position:fixed;
     top:0;
