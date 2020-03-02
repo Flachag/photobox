@@ -4,7 +4,9 @@ import {showLightbox} from "./lightbox.js";
 let id;
 
 function insert(data, base_url) {
+    let row = $('.row');
     if(data.photos) {
+        row.empty();
         data.photos.forEach(function (photo) {
             let card = $('<div class="col-md-4"><div class="card mb-4 shadow-sm"><img class="card-img-top" height="225"></div></div>');
             $('img', card).attr({
@@ -16,7 +18,7 @@ function insert(data, base_url) {
             card.find('img').on('click', function () {
                 showLightbox($(this).attr('data-img'));
             });
-            $('.row').append(card);
+            row.append(card);
         });
     }
 }
