@@ -1,7 +1,7 @@
 import {init, firstLoad, next, prev} from "./gallery.js";
 
 $(function () {
-    init(1);
+    init();
     $('#load').on('click', function () {
         firstLoad();
     });

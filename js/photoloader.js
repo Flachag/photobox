@@ -5,6 +5,8 @@ export function request(endpoint) {
         url: server + endpoint,
         method: 'GET',
         responseType: 'json'
+    }).catch(error => {
+        console.log(error.response)
     });
 }
 
