@@ -1,4 +1,5 @@
 import {init, firstLoad, next, prev} from "./gallery.js";
+import {nextLightbox, prevLightbox} from "./lightbox.js";
 
 $(function () {
     init();
@@ -15,10 +16,10 @@ $(function () {
     });
 
     $('#nextLightbox').on('click', function(){
-        nextLightbox();
+        nextLightbox()
     });
 
-    $('#prevLoghtbox').on('click', function(){
+    $('#prevLightbox').on('click', function(){
         prevLightbox();
     });
 
