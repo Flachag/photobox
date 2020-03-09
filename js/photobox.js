@@ -13,5 +13,17 @@ $(function () {
     $('#prev').on('click', function(){
         prev();
     });
+
+    $('#nextLightbox').on('click', function(){
+        nextLightbox();
+    });
+
+    $('#prevLoghtbox').on('click', function(){
+        prevLightbox();
+    });
+
+    $('.closeBtn').on('click', function() {
+        $('#lightbox').hide();
+    });
 });
 

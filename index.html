@@ -6,8 +6,6 @@
         <meta name="description" content="">
         <meta name="author" content="Jules Sayer, Flavien Chagras">
         <title>Photobox</title>
-
-        <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/photobox.css" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
@@ -28,7 +26,7 @@
             <section class="jumbotron text-center">
                 <div class="container">
                     <h1>Photobox</h1>
-                    <p class="lead text-muted">Sah quel plaisir d'utiliser Bootstrap 🙄.</p>
+                    <p class="lead text-muted">Projet Javascript 🙄.</p>
                     <p>
                         <button class="btn btn-primary my-2" id="prev" disabled><i class="fas fa-backward"></i></button>
                         <button class="btn btn-secondary my-2" id="load">Charger</button>
@@ -42,6 +40,19 @@
                     <div class="row" id="gallery">
 
                     </div>
+                </div>
+            </div>
+
+            <div id="lightbox">
+                <a class="btn btn-secondary closeBtn"><i class="fas fa-times text-light"></i></a>
+                <div id="content">
+                    <a class="btn btn-secondary" id="prevLightbox">
+                        <i class="fas fa-backward text-light"></i>
+                    </a>
+                    <img src=""/>
+                    <a class="btn btn-secondary" id="nextLightbox">
+                        <i class="fas fa-forward text-light"></i>
+                    </a>
                 </div>
             </div>
         </main>

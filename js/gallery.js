@@ -4,8 +4,10 @@ import {showLightbox} from "./lightbox.js";
 let id;
 let offset;
 let max;
+let data;
 
-function insert(data, base_url) {
+
+function insert(base_url) {
     if(data.photos) {
         id.empty();
         data.photos.forEach(function (photo) {
@@ -55,7 +57,8 @@ function load(o = 0) {
     let base_url = "https://webetu.iutnc.univ-lorraine.fr";
     initLoader(base_url);
     request('/www/canals5/photobox/photos/?offset='+o+'&size=9').then(function (response) {
-        insert(response.data, base_url);
+        data = response.data;
+        insert(base_url);
         setMax(base_url+response.data.links.last.href)
     });
 }

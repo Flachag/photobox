@@ -44,10 +44,11 @@ footer p {
     height:100%;
     background: rgba(0,0,0,.7);
     text-align:center;
+    display: none;
 }
 
 #lightbox img {
-    margin: 5vh 5vw;
+    margin: 1vh 1vw;
     box-shadow:0 0 25px #111;
     -webkit-box-shadow:0 0 25px #111;
     -moz-box-shadow:0 0 25px #111;
@@ -55,18 +56,8 @@ footer p {
     max-height: 90vh;
 }
 
-.close {
-    color: white;
+.closeBtn {
     position: absolute;
     top: 10px;
     right: 25px;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #666;
-    text-decoration: none;
-    cursor: pointer;
 }
