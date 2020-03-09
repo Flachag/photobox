@@ -28,26 +28,13 @@ function insert(base_url) {
             }
         });
         id.empty();
-        data.photos.forEach(function (photo, index) {
-            let nextPhoto, prevPhoto;
-            if(data.photos[index + 1] !== undefined) {
-                nextPhoto = base_url + data.photos[index + 1].photo.original.href;
-            } else {
-                nextPhoto = base_url + data.photos[0].photo.original.href;
-            }
-            if(data.photos[index - 1] !== undefined) {
-                prevPhoto = base_url + data.photos[index - 1].photo.original.href;
-            } else {
-                prevPhoto = base_url + data.photos[data.photos.length - 1].photo.original.href;
-            }
+        data.photos.forEach(function (photo) {
             let card = $('<div class="col-md-4"><div class="card mb-4 shadow-sm" id="'+ photo.photo.id +'"><img class="card-img-top" height="225"></div></div>');
             $('img', card).attr({
                 alt: photo.photo.titre,
                 title: photo.photo.titre,
                 src: base_url + photo.photo.thumbnail.href,
-                'data-img': base_url + photo.photo.original.href,
-                'data-next': nextPhoto,
-                'data-prev': prevPhoto
+                'data-img': base_url + photo.photo.original.href
             });
             card.find('img').on('click', function () {
                 showLightbox(photo.photo.id, minId, maxId);
