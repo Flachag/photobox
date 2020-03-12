@@ -1,12 +1,30 @@
+import {request, initLoader} from "./photoloader.js";
 let actualImageId;
 let maxId;
 let minId;
 
+function getInfoImage(imageId) {
+    let base_url = "https://webetu.iutnc.univ-lorraine.fr";
+    initLoader(base_url);
+    request('/www/canals5/photobox/photos/' + imageId).then(function (response) {
+        showInfoImage(response.data);
+    });
+}
+
+function showInfoImage(data) {
+    let node = $('#infos');
+    node.empty();
+    $.each(data.photo, function (index, value) {
+        if(typeof value !== "object")
+        node.append('<span class="badge badge-primary">'+ index +': '+ value +'</span>')
+    });
+}
+
 function updateLightbox(image) {
-    let content = $('#content');
-    $('img', content).attr({
+    $('#img').attr({
         src: image
     });
+    getInfoImage(actualImageId);
 }
 
 function change(image) {

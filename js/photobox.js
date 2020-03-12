@@ -23,7 +23,7 @@ $(function () {
         prevLightbox();
     });
 
-    $('.closeBtn').on('click', function() {
+    $('#close').on('click', function() {
         $('#lightbox').hide();
     });
 });
