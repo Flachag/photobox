@@ -26,7 +26,7 @@
             <section class="jumbotron text-center">
                 <div class="container">
                     <h1>Photobox</h1>
-                    <p class="lead text-muted">Projet Javascript 🙄.</p>
+                    <p class="lead text-muted">Projet Javascript.</p>
                     <p>
                         <button class="btn btn-primary my-2" id="prev" disabled><i class="fas fa-backward"></i></button>
                         <button class="btn btn-secondary my-2" id="load">Charger</button>
@@ -60,13 +60,21 @@
                                 <a class="btn btn-secondary mr-1" id="prevLightbox">
                                     <i class="fas fa-backward text-light"></i>
                                 </a>
+                                <a class="btn btn-primary mr-1" data-toggle="collapse" href="#commentairesCollapse" role="button" aria-expanded="false" aria-controls="commentairesCollapse">
+                                    Commentaires
+                                </a>
                                 <a class="btn btn-secondary" id="nextLightbox">
                                     <i class="fas fa-forward text-light"></i>
                                 </a>
                             </div>
+                            <div class="collapse mt-1" id="commentairesCollapse">
+                                <div class="card card-body">
+                                    <div id="comments"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="modal-footer justify-content-start" id="infos">
-
+                        <div class="modal-footer">
+                            <div id="infos"></div>
                         </div>
                     </div>
                 </div>

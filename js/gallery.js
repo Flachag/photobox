@@ -6,7 +6,6 @@ let offset;
 let max;
 let data;
 
-
 function insert(base_url) {
     if(data.photos) {
         data.photos.sort(function (a,b) {
