@@ -4,7 +4,8 @@ export function request(endpoint) {
     return axios.request({
         url: server + endpoint,
         method: 'GET',
-        responseType: 'json'
+        responseType: 'json',
+        withCredentials: true
     }).catch(error => {
         console.log(error.response)
     });
